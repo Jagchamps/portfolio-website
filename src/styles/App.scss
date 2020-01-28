@@ -1,0 +1,87 @@
+@import "Fonts.scss";
+@import "Variables.scss";
+
+html {
+  background-color: #0e0d0d;
+}
+
+.Profile {
+  text-align: center;
+  font-family: $roboto;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  width: $max-width;
+  height: 128px;
+  top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.body {
+  width: $max-width;
+  height: 64px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar {
+  @extend .body;
+  background-color: #888686;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.navbar li {
+  padding-left: 30px;
+  padding-right: 30px;
+  list-style: none;
+}
+
+.navbar a:hover {
+  border-bottom: 1px solid $main-color;
+  color: $main-color;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 114px;
+  height: 114px;
+  margin: 4px;
+  border: solid 2px #999
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  height: 12em;
+  background-color: #888686;
+  position: fixed;
+}
+
+/*.aboutme, .portfolio, .home {
+  background-color: black;
+}
+*/
