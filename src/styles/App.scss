@@ -1,8 +1,19 @@
 @import "Fonts.scss";
 @import "Variables.scss";
+@import "BurgerMenu.scss";
 
 html {
   background-color: #0e0d0d;
+  box-sizing: border-box;
+}
+
+#root {
+  @media screen and (max-width: $bp-small){
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  padding: 1rem;
 }
 
 .Profile {
@@ -14,7 +25,14 @@ html {
 }
 
 .header {
-  width: $max-width;
+  @media (min-width: $bp-large) {
+    width: $max-width;
+  }
+
+  @media (max-width: $bp-large) {
+    width: 100%;
+  }
+  
   height: 128px;
   top: 0;
   margin-right: auto;
@@ -30,33 +48,50 @@ html {
   text-align: left;
 }
 
+.header-right {
+  @media (max-width: $bp-medium) {
+    display: none;
+  }
+}
+
 .body {
-  width: $max-width;
-  height: 64px;
+  @media (min-width: $bp-large) {
+    width: $max-width;
+  }
+
+  @media (max-width: $bp-large) {
+    width: 100%;
+  }
+
   margin-right: auto;
   margin-left: auto;
 }
 
 .navbar {
-  @extend .body;
-  background-color: #888686;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
+  @media (max-width: $bp-medium) {
+    display: none;
+  }
+
+  @media (min-width: $bp-medium) {
+    display: flex;
+  }
+
+  height: 64px;
+  width: inherit;
   margin-right: auto;
   margin-left: auto;
+  //border: solid 2px #999 //for observing box size
 }
 
 .navbar ul {
   display: flex;
+  width: inherit;
   flex-direction: row;
+  justify-content: space-around;
   align-items: flex-end;
 }
 
 .navbar li {
-  padding-left: 30px;
-  padding-right: 30px;
   list-style: none;
 }
 
@@ -74,14 +109,95 @@ html {
 }
 
 .footer {
-  width: 100%;
+  @media (min-width: $bp-large) {
+    width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 12px;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 12px;
+  }
+
   bottom: 0;
-  height: 12em;
-  background-color: #888686;
-  position: fixed;
+  margin-right: auto;
+  margin-left: auto;
+  //border: solid 2px #999 //for observing box size
 }
 
-/*.aboutme, .portfolio, .home {
-  background-color: black;
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-*/
+
+.col {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0 12px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 100%;
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.col-1 {max-width: 8.33%;}
+.col-2 {max-width: 16.66%;}
+.col-3 {max-width: 25%;}
+.col-4 {max-width: 33.33%;}
+.col-5 {max-width: 41.66%;}
+.col-6 {max-width: 50%;}
+.col-7 {max-width: 58.33%;}
+.col-8 {max-width: 66.66%;}
+.col-9 {max-width: 75%;}
+.col-10 {max-width: 83.33%;}
+.col-11 {max-width: 91.66%;}
+.col-12 {max-width: 100%;}
+
+.section-first-item {
+  @media only screen and (max-width: $bp-medium) {
+    width: 80%;
+    margin: 0 12px 0 12px;
+  }
+
+  @media (min-width: $bp-medium) {
+    order: 0;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+  }
+}
+
+.section-second-item {
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+  }
+
+  @media (min-width: $bp-medium) {
+    order: 1;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+  }
+}
+
+.other-projects-photo {
+  border-radius: 3px;
+  height: auto;
+
+  @media (max-width: $bp-medium) {
+    width: 80%;
+  }
+
+  @media (min-width: $bp-medium) {
+    width: 100%;
+  }
+}

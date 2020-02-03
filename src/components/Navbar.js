@@ -3,9 +3,9 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
     NavLink
   } from 'react-router-dom';
+import BurgerMenu from './BurgerMenu.js'
 import AboutMe from './AboutMe.js';
 import Portfolio from './Portfolio.js';
 import OtherProjects from './OtherProjects.js';
@@ -45,6 +45,8 @@ function Navbar() {
                         </li>
                     </ul>
                 </nav>
+
+                <BurgerMenu />
 
                 <Switch>
                     <Route path="/aboutme">
