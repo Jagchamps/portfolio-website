@@ -32,7 +32,7 @@ function Navbar() {
                 <nav className='navbar'>
                     <ul>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/">Home</NavLink>
+                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Home</NavLink>
                         </li>
                         <li>
                             <NavLink style={styles.link} activeStyle={styles.active} to="/aboutme">About me</NavLink>
