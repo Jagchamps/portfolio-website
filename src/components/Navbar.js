@@ -34,9 +34,6 @@ function Navbar() {
                             <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">About Me</NavLink>
                         </li>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} to="/portfolio">Portfolio</NavLink>
-                        </li>
-                        <li>
                             <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
                         </li>
                     </ul>
@@ -45,9 +42,6 @@ function Navbar() {
                 <BurgerMenu />
 
                 <Switch>
-                    <Route path="/portfolio">
-                        <Portfolio />
-                    </Route>
                     <Route path="/otherprojects">
                         <OtherProjects />
                     </Route>
