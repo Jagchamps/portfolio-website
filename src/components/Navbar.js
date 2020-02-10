@@ -9,7 +9,6 @@ import BurgerMenu from './BurgerMenu.js'
 import AboutMe from './AboutMe.js';
 import Portfolio from './Portfolio.js';
 import OtherProjects from './OtherProjects.js';
-import Home from './Home.js';
 import '../styles/App.scss';
 
 var styles = {
@@ -32,10 +31,7 @@ function Navbar() {
                 <nav className='navbar'>
                     <ul>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} to="/aboutme">About me</NavLink>
+                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">About Me</NavLink>
                         </li>
                         <li>
                             <NavLink style={styles.link} activeStyle={styles.active} to="/portfolio">Portfolio</NavLink>
@@ -49,9 +45,6 @@ function Navbar() {
                 <BurgerMenu />
 
                 <Switch>
-                    <Route path="/aboutme">
-                        <AboutMe />
-                    </Route>
                     <Route path="/portfolio">
                         <Portfolio />
                     </Route>
@@ -59,7 +52,7 @@ function Navbar() {
                         <OtherProjects />
                     </Route>
                     <Route path="/">
-                        <Home />
+                        <AboutMe />
                     </Route>
                 </Switch>
             </Router>

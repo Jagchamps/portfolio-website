@@ -21,8 +21,7 @@ var styles = {
 function BurgerMenu() {
     return (
         <Menu right width={ "100%" } className="bm-menu-container">
-            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Home</NavLink>
-            <NavLink style={styles.link} activeStyle={styles.active} to="/aboutme">About me</NavLink>
+            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">About Me</NavLink>
             <NavLink style={styles.link} activeStyle={styles.active} to="/portfolio">Portfolio</NavLink>
             <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
         </Menu>

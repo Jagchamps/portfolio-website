@@ -7,7 +7,7 @@ import profile from './images/profile.jpg';
 class App extends React.Component {
   render() {
     return (
-    <div className="Profile">
+    <div className="profile">
       <div className="header">
         <div className="header-left">
           <img src={profile} className="profile-photo"/>
