@@ -6,6 +6,7 @@ import {
     NavLink
   } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu.js'
+import Intro from './Intro.js';
 import AboutMe from './AboutMe.js';
 import Portfolio from './Portfolio.js';
 import OtherProjects from './OtherProjects.js';
@@ -31,7 +32,10 @@ function Navbar() {
                 <nav className='navbar'>
                     <ul>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">About Me</NavLink>
+                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Intro</NavLink>
+                        </li>
+                        <li>
+                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/aboutme">About Me</NavLink>
                         </li>
                         <li>
                             <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
@@ -45,8 +49,11 @@ function Navbar() {
                     <Route path="/otherprojects">
                         <OtherProjects />
                     </Route>
-                    <Route path="/">
+                    <Route path="/aboutme">
                         <AboutMe />
+                    </Route>
+                    <Route path="/">
+                        <Intro />
                     </Route>
                 </Switch>
             </Router>

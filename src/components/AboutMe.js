@@ -3,7 +3,7 @@ import profile from '../images/profile.jpg';
 
 function AboutMe() {
     return (
-        <div className="aboutme">
+        <section id="aboutme" className="aboutme">
             <h2>ABOUT ME</h2>
             <img src={profile} className="aboutme-photo"/>
             <div className="aboutme-section">
@@ -11,7 +11,7 @@ function AboutMe() {
                 <p>I enjoy and creating solutions to technical problems and designing responsive, elegant and intuitive web applications</p>
                 <p>In my spare time I go climbing, watch arty films and attend gigs in the fine city of Norwich</p>
             </div>
-        </div>
+        </section>
     );
 }
 

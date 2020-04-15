@@ -4,7 +4,7 @@ import radio from '../images/nujazz-logo.png'
 
 function OtherProjects() {
     return (
-        <div className="other-projects">
+        <section id="otherprojects" className="other-projects">
             <h2>OTHER PROJECTS</h2>
 
             <h3>Dogface Improv</h3>
@@ -53,7 +53,7 @@ function OtherProjects() {
                 </div>
             </div>
 
-        </div>
+        </section>
     );
 }
 

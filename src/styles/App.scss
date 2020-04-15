@@ -42,11 +42,11 @@ html {
   justify-content: space-between;
 }
 
-.header-left {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-}
+// .header-left {
+//   display: flex;
+//   flex-direction: row;
+//   text-align: left;
+//}
 
 .header-right {
   @media (max-width: $bp-medium) {
@@ -89,14 +89,28 @@ html {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
+  padding: 0;
 }
 
 .navbar li {
   list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration-line: none;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .navbar a:hover {
   border-bottom: 1px solid $main-color;
+  color: $main-color;
+}
+
+.navbar a:active {
   color: $main-color;
 }
 
