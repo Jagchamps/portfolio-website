@@ -7,7 +7,7 @@ import {
   } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu.js'
 import Intro from './Intro.js';
-import AboutMe from './AboutMe.js';
+import About from './About.js';
 import Portfolio from './Portfolio.js';
 import OtherProjects from './OtherProjects.js';
 import '../styles/App.scss';
@@ -35,7 +35,7 @@ function Navbar() {
                             <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Intro</NavLink>
                         </li>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/aboutme">About Me</NavLink>
+                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/about">About Me</NavLink>
                         </li>
                         <li>
                             <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
@@ -49,8 +49,8 @@ function Navbar() {
                     <Route path="/otherprojects">
                         <OtherProjects />
                     </Route>
-                    <Route path="/aboutme">
-                        <AboutMe />
+                    <Route path="/about">
+                        <About />
                     </Route>
                     <Route path="/">
                         <Intro />

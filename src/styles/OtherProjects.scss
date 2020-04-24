@@ -1,0 +1,36 @@
+.project-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-section-first-item {
+    @media (min-width: $bp-medium) {
+        order: 0;
+    }
+}
+
+.project-section-second-item {
+    @media (min-width: $bp-medium) {
+        order: 1;
+    }
+}
+
+.other-projects-text {
+    border-left: 1px solid $main-color;
+    padding-left: 16px;
+    text-align: left;
+}
+
+.other-projects-photo {
+    border-radius: 3px;
+    height: auto;
+
+    @media (max-width: $bp-medium) {
+        width: 80%;
+    }
+
+    @media (min-width: $bp-medium) {
+        width: 100%;
+    }
+}

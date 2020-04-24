@@ -3,7 +3,7 @@ import './styles/App.scss';
 import Navbar from './components/Navbar.js';
 import Footer from './components/Footer.js';
 import Intro from './components/Intro.js';
-import AboutMe from './components/AboutMe.js';
+import About from './components/About.js';
 import Portfolio from './components/Portfolio.js';
 import OtherProjects from './components/OtherProjects.js';
 import profile from './images/profile.jpg';
@@ -24,7 +24,7 @@ class App extends React.Component {
                   <a href="#intro">Intro</a>
                 </li>
                 <li>
-                  <a href="#aboutme">About Me</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
                   <a href="#otherprojects">Other Projects</a>
@@ -34,7 +34,7 @@ class App extends React.Component {
           </div>
         </div>
         <Intro />
-        <AboutMe />
+        <About />
         <OtherProjects />
         <Footer />
       </div>

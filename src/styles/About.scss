@@ -1,0 +1,35 @@
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-section-first-item {
+    @media (min-width: $bp-medium) {
+        order: 0;
+    }
+}
+
+.about-section-second-item {
+    @media (min-width: $bp-medium) {
+        order: 1;
+    }
+}
+
+.about-text {
+    border-left: 1px solid $main-color;
+    padding-left: 16px;
+    //margin-left: auto;
+    //margin-right: auto;
+    max-width: 450px;
+    text-align: left;
+}
+
+.about-photo {
+    border-radius: 50%;
+    width: 228px;
+    height: 228px;
+    //margin: auto;
+    display: block;
+    border: solid 2px #999;
+}

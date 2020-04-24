@@ -8,15 +8,15 @@ function OtherProjects() {
             <h2>OTHER PROJECTS</h2>
 
             <h3>Dogface Improv</h3>
-            <div class="section">
+            <div class="project-section">
 
-                <div class="col section-first-item">
+                <div class="col col-xs-12 col-md-4 project-section-first-item">
                     <a href="https://www.dogfaceimprov.com/" target="_blank">
                         <img src={improv} className="other-projects-photo"/>
                     </a>
                 </div>
 
-                <div class="col section-second-item">
+                <div class="col col-xs-12 col-md-4 project-section-second-item">
                     <div class="other-projects-text">
                         <p>
                             I am an active member of the improv collective, Dogface Improv, where I currently perform in numerous troupes, including:
@@ -31,14 +31,14 @@ function OtherProjects() {
             </div>
 
             <h3>NuJazz Jukebox</h3>
-            <div class="section">
-                <div class="col section-second-item">
+            <div class="project-section">
+                <div class="col col-xs-12 col-md-4 project-section-second-item">
                     <a href="https://www.mixcloud.com/NuJazzJukebox/" target="_blank">
                         <img src={radio} className="other-projects-photo"/>
                     </a>
                 </div>
 
-                <div class="col section-first-item">
+                <div class="col col-xs-12 col-md-4 project-section-first-item">
                     <div class="other-projects-text">
                         <p>
                             For three years I was the host and producer of the specialist music show, NuJazz Jukebox on Norwich's community radio station, Future Radio.
