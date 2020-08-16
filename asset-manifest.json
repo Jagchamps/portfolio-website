@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.ae94d826.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.ee9d69bd.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.ee9d69bd.chunk.js.map",
-    "runtime-main.js": "/portfolio-website/static/js/runtime-main.f6517661.js",
-    "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.f6517661.js.map",
-    "static/js/2.d16c08b8.chunk.js": "/portfolio-website/static/js/2.d16c08b8.chunk.js",
-    "static/js/2.d16c08b8.chunk.js.map": "/portfolio-website/static/js/2.d16c08b8.chunk.js.map",
+    "main.css": "/portfolio-website/static/css/main.52aecfb4.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.0971ff4f.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.0971ff4f.chunk.js.map",
+    "runtime-main.js": "/portfolio-website/static/js/runtime-main.c16362e1.js",
+    "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.c16362e1.js.map",
+    "static/js/2.6ca023ff.chunk.js": "/portfolio-website/static/js/2.6ca023ff.chunk.js",
+    "static/js/2.6ca023ff.chunk.js.map": "/portfolio-website/static/js/2.6ca023ff.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "precache-manifest.2faaa777bfd99bdcadc540584fc4bac9.js": "/portfolio-website/precache-manifest.2faaa777bfd99bdcadc540584fc4bac9.js",
+    "precache-manifest.d73ebcd27b5a7475b93df57ebccbef18.js": "/portfolio-website/precache-manifest.d73ebcd27b5a7475b93df57ebccbef18.js",
     "service-worker.js": "/portfolio-website/service-worker.js",
-    "static/css/main.ae94d826.chunk.css.map": "/portfolio-website/static/css/main.ae94d826.chunk.css.map",
-    "static/js/2.d16c08b8.chunk.js.LICENSE": "/portfolio-website/static/js/2.d16c08b8.chunk.js.LICENSE",
+    "static/css/main.52aecfb4.chunk.css.map": "/portfolio-website/static/css/main.52aecfb4.chunk.css.map",
+    "static/js/2.6ca023ff.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.6ca023ff.chunk.js.LICENSE.txt",
     "static/media/dogface.jpg": "/portfolio-website/static/media/dogface.7830c07f.jpg",
     "static/media/nujazz-logo.png": "/portfolio-website/static/media/nujazz-logo.bd5f8766.png",
     "static/media/profile.jpg": "/portfolio-website/static/media/profile.07a6cb67.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f6517661.js",
-    "static/js/2.d16c08b8.chunk.js",
-    "static/css/main.ae94d826.chunk.css",
-    "static/js/main.ee9d69bd.chunk.js"
+    "static/js/runtime-main.c16362e1.js",
+    "static/js/2.6ca023ff.chunk.js",
+    "static/css/main.52aecfb4.chunk.css",
+    "static/js/main.0971ff4f.chunk.js"
   ]
 }
