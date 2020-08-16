@@ -1,4 +1,20 @@
-$main-color: #0f70e8;
+//dark theme
+ $main-color: #569CD6; //#0f70e8;
+ $seconday-color: #CE9178;
+ $tertiary-color: #4EC9B0;
+ $quarternary-color: #4FC1FF;
+ $font-color: #d4d4d4;
+ $background-color: #1e1e1e;
+ $background-color-two: #cccccc33;
+
+//light theme
+// $main-color: #7A3E9D; //#0f70e8;
+// $seconday-color: #AA3731;
+// $tertiary-color: #4B69C6;
+// $quarternary-color: #448C27;
+// $font-color: #333333;
+// $background-color: #f2f2f2;
+// $background-color-two: #ede8ef;
 
 $bp-small: 480px;
 $bp-medium: 768px;

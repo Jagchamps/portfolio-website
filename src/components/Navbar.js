@@ -1,63 +1,73 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    NavLink
-  } from 'react-router-dom';
-import BurgerMenu from './BurgerMenu.js'
-import Intro from './Intro.js';
-import About from './About.js';
-import Portfolio from './Portfolio.js';
-import OtherProjects from './OtherProjects.js';
-import '../styles/App.scss';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+import ThemeToggle from './ThemeToggle';
+import { motion } from 'framer-motion';
 
-var styles = {
-    link: {
-        textDecorationLine: 'none',
-        color: 'white',
-        textTransform: 'uppercase',
-        textAlign: 'center'
-    },
-
-    active: {
-        color: '#0f70e8'
+const linkVariants = {
+    hover: {
+        scale: 1.1,
+        transition: {
+            duration: 0.25
+        }
     }
-};
+}
 
-function Navbar() {
+const Navbar = () => {
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
+
     return (
-        <div className="body">
-            <Router>
-                <nav className='navbar'>
+        <header>
+            <div
+                className="header-inner"
+                style={{ backgroundColor: theme.ui }}>
+                <nav className="navbar col-xs-10 col-lg-8 col-xl-4">
                     <ul>
-                        <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">Intro</NavLink>
-                        </li>
-                        <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/about">About Me</NavLink>
-                        </li>
-                        <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
-                        </li>
+                        <motion.li
+                            variants={linkVariants}
+                            whileHover="hover">
+                            <a
+                                href="#intro"
+                                style={{ color: theme.highlight.primary }}>
+                                Intro
+                                </a>
+                        </motion.li>
+                        <motion.li
+                            variants={linkVariants}
+                            whileHover="hover">
+                            <a
+                                href="#about"
+                                style={{ color: theme.highlight.primary }}>
+                                About
+                                </a>
+                        </motion.li>
+                        <motion.li
+                            variants={linkVariants}
+                            whileHover="hover">
+                            <a
+                                href="#skills"
+                                style={{ color: theme.highlight.primary }}>
+                                Skills
+                                </a>
+                        </motion.li>
+                        <motion.li
+                            variants={linkVariants}
+                            whileHover="hover">
+                            <a
+                                href="#contact"
+                                style={{ color: theme.highlight.primary }}>
+                                Contact
+                                </a>
+                        </motion.li>
+                        <motion.li
+                            variants={linkVariants}
+                            whileHover="hover">
+                            <ThemeToggle />
+                        </motion.li>
                     </ul>
                 </nav>
-
-                <BurgerMenu />
-
-                <Switch>
-                    <Route path="/otherprojects">
-                        <OtherProjects />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/">
-                        <Intro />
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
+            </div>
+        </header>
     );
 }
 

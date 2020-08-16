@@ -1,147 +1,150 @@
 @import "Fonts.scss";
 @import "Variables.scss";
 @import "Columns.scss";
-@import "BurgerMenu.scss";
 @import "Intro.scss";
 @import "About.scss";
-@import "OtherProjects.scss";
+@import "Navbar.scss";
+@import "Skills.scss";
+@import "ThemeToggle.scss";
 
-html {
-  background-color: #0e0d0d;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-#root {
-  @media screen and (max-width: $bp-small) {
-    height: 100%;
-    overflow: auto;
-    overflow-x: hidden;
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  @media (min-width: $bp-large) {
+    width: 100%;
   }
-  padding: 1rem;
+
+  // @media (max-width: $bp-large) {
+  //   width: $max-width;
+  // }
+
+  min-height: 100%;
+  text-align: center;
+  font-family: $roboto;
+}
+
+// #root {
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+// .profile {
+//   @media screen and (max-width: $bp-small) {
+//     height: 100%;
+//   }
+
+//   text-align: center;
+//   font-family: $roboto;
+//   // height: 100%;
+//   // width: 100%;
+// }
+
+h1 {
+  font-size: 6em;
+  margin: 1.5rem -1.5rem 1.5rem;
 }
 
 h2 {
   font-size: 3em;
+  margin: 1.25rem -1.25rem 1.25rem;
 }
 
-.profile {
-  text-align: center;
-  font-family: $roboto;
-  color: white;
-  height: 100%;
-  width: 100%;
+h3 {
+  font-size: 2em;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
-.header {
-  @media (min-width: $bp-large) {
-    width: $max-width;
-  }
-
-  @media (max-width: $bp-large) {
-    width: 100%;
-  }
-
-  height: 64px;
-  top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+p {
+  font-size: 1.25em;
+  text-align: left;
 }
 
-// .header-left {
-//   display: flex;
-//   flex-direction: row;
-//   text-align: left;
-//}
-
-.header-right {
-  @media (max-width: $bp-medium) {
-    display: none;
-  }
-}
-
-.navbar {
-  @media (max-width: $bp-medium) {
-    display: none;
-  }
-
-  @media (min-width: $bp-medium) {
-    display: flex;
-  }
-
-  height: 64px;
-  width: inherit;
-  margin-right: auto;
-  margin-left: auto;
-  border-bottom: solid 1px white; //for observing box size
-}
-
-.navbar ul {
-  display: flex;
-  width: inherit;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
-  padding: 0;
-}
-
-.navbar li {
-  list-style: none;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.navbar a {
+a {
   text-decoration-line: none;
-  color: white;
   text-transform: uppercase;
   text-align: center;
 }
 
-.navbar a:hover {
-  border-bottom: 1px solid $main-color;
-  color: $main-color;
+li {
+  width: fit-content;
+  list-style: none;
+  margin: 1rem -1rem 0;
+  font-weight: 500;
+  font-size: 1.25em;
 }
 
-.navbar a:active {
-  color: $main-color;
-}
+// a:hover {
+//   //border-bottom: 1px solid $main-color;
+//   color: $main-color;
+// }
 
-.body {
-  @media (min-width: $bp-large) {
-    width: $max-width;
-  }
-
-  @media (max-width: $bp-large) {
-    width: 100%;
-  }
-
-  margin-right: auto;
-  margin-left: auto;
-}
+// a:active {
+//   color: $main-color;
+// }
 
 section {
   min-height: 100vh;
 }
 
-.footer {
+.section-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer {
   @media (min-width: $bp-large) {
     width: $max-width;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 12px;
   }
 
   @media only screen and (max-width: $bp-large) {
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 12px;
   }
 
   bottom: 0;
+  min-height: 25vh;
   margin-right: auto;
   margin-left: auto;
-  border-top: solid 1px white; //for observing box size
+}
+
+.contact {
+  padding-bottom: 1rem;
+}
+
+.contact ul {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+}
+
+
+//Media Rules
+
+@media screen and (max-width: $bp-medium) {
+  h1 {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: $bp-full) {
+  html { font-size: 125%; }
 }
