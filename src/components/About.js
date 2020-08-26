@@ -64,7 +64,7 @@ const About = () => {
     }, [animation, inView]);
 
     return (
-        <motion.section id="about" className="about section-container" style={{ color: theme.syntax }}
+        <motion.section id="about" className="about section-container"
             ref={ref}
             variants={sectionVariants}
             initial="hidden"

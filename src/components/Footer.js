@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { motion } from 'framer-motion';
+import ScrollToTop from './ScrollToTop';
 
 const linkVariants = {
     hover: {
@@ -17,7 +18,7 @@ const Footer = () => {
 
     return (
         <footer id="contact" className="section-container">
-            <h2 className="col-xs-12" style={{ color: theme.syntax }}>
+            <h2 className="col-xs-12">
                 <span style={{ color: theme.highlight.secondary }}>Contact</span> me
                 </h2>
             <div className='col-xs-12 contact section-container'>
@@ -44,6 +45,7 @@ const Footer = () => {
                     </motion.li>
                 </ul>
             </div>
+            <ScrollToTop />
         </footer>
     )
 }

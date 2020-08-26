@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import { ThemeContext } from '../contexts/ThemeContext';
 import improv from '../images/dogface.jpg';
 import radio from '../images/nujazz-logo.png'
 
@@ -50,6 +51,8 @@ const rightContainerVariants = {
 }
 
 function OtherProjects() {
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
     const animation = useAnimation();
     const [ref, inView, entry] = useInView({ threshold: 0.1 })
 
@@ -62,17 +65,19 @@ function OtherProjects() {
     }, [animation, inView]);
 
     return (
-        <motion.section id="other-projects" className="other-projects section-container"
+        <motion.section id="other-projects" className="other-projects section-container" style={{ color: theme.syntax }}
             ref={ref}
             variants={sectionVariants}
             initial="hidden"
             animate={animation}
         >
-            <h2 className="col col-xs-12">OTHER PROJECTS</h2>
+            <h2 className="col col-xs-8">OTHER PROJECTS</h2>
 
-            <h3 className="col col-xs-12">Dogface Improv</h3>
-            <div className="project-section col col-xs-12">
-                <motion.div className="col col-xs-12 col-md-4 project-section-first-item"
+            <a className="col col-xs-2" href="https://www.dogfaceimprov.com/" target="_blank">Example Link</a>
+
+            <h3 className="col col-xs-8">Dogface Improv</h3>
+            <div className="project-section col col-xs-8">
+                <motion.div className="col col-xs-8 col-md-4 project-section-first-item"
                     variants={leftContainerVariants}
                 >
                     <a href="https://www.dogfaceimprov.com/" target="_blank">
@@ -80,7 +85,7 @@ function OtherProjects() {
                     </a>
                 </motion.div>
 
-                <motion.div className="col col-xs-12 col-md-4 project-section-second-item"
+                <motion.div className="col col-xs-8 col-md-4 project-section-second-item"
                     variants={rightContainerVariants}
                 >
                     <div className="other-projects-text">
@@ -96,9 +101,9 @@ function OtherProjects() {
                 </motion.div>
             </div>
 
-            <h3 className="col col-xs-12">NuJazz Jukebox</h3>
-            <div className="project-section col col-xs-12">
-                <motion.div className="col col-xs-12 col-md-4 project-section-second-item"
+            <h3 className="col col-xs-8">NuJazz Jukebox</h3>
+            <div className="project-section col col-xs-8">
+                <motion.div className="col col-xs-8 col-md-4 project-section-second-item"
                     variants={rightContainerVariants}
                 >
                     <a href="https://www.mixcloud.com/NuJazzJukebox/" target="_blank">
@@ -106,7 +111,7 @@ function OtherProjects() {
                     </a>
                 </motion.div>
 
-                <motion.div className="col col-xs-12 col-md-4 project-section-first-item"
+                <motion.div className="col col-xs-8 col-md-4 project-section-first-item"
                     variants={leftContainerVariants}
                 >
                     <div className="other-projects-text">

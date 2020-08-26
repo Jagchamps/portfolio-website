@@ -5,21 +5,6 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import SkillItem from './SkillItem';
 import { v1 as uuidv1 } from 'uuid';
 
-// const sectionVariants = {
-//     hidden: {
-//         opacity: 0
-//     },
-//     visible: {
-//         opacity: 1,
-//         transition: {
-//             delay: 0.5,
-//             duration: 1.0,
-//             when: "beforeChildren",
-//             staggerChildren: 0.4
-//         }
-//     }
-// }
-
 const sectionVariants = {
     hidden: {
         opacity: 0
@@ -67,14 +52,14 @@ const Skills = () => {
     }, [animation, inView]);
 
     return (
-        <motion.section id="skills" className="skills section-container" style={{ color: theme.syntax }}
+        <motion.section id="skills" className="skills section-container"
             ref={ref}
             variants={sectionVariants}
             initial="hidden"
             animate={animation}
         >
-            <motion.h2 className="col col-xs-8"><span style={{ color: theme.highlight.secondary }}>Skills</span> I know</motion.h2>
-            <motion.div className="col col-xs-8 skills-section">
+            <motion.h2 className="col col-xs-12 col-sm-8"><span style={{ color: theme.highlight.secondary }}>Skills</span> I know</motion.h2>
+            <motion.div className="col col-xs-12 col-sm-8 skills-section">
                 <motion.p variants={leftContainerVariants}>Here a few skills that I am competent in, and I'm constantly adding more to the list.</motion.p>
                 <motion.ul className="col skills-list">
                     {items.map(item => <SkillItem id={uuidv1} item={item} />)}

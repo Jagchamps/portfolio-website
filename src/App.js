@@ -15,7 +15,7 @@ const App = () => {
   const theme = isLightTheme ? light : dark;
 
   return (
-    <div className="profile" style={{ backgroundColor: theme.bg }}>
+    <div className="profile" style={{ backgroundColor: theme.bg, color: theme.syntax }}>
       <Navbar />
       <Intro />
       <About />

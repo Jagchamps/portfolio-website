@@ -21,17 +21,8 @@ const Navbar = () => {
             <div
                 className="header-inner"
                 style={{ backgroundColor: theme.ui }}>
-                <nav className="navbar col-xs-10 col-lg-8 col-xl-4">
+                <nav className="navbar col-xs-12 col-sm-6 col-lg-4 col-xl-2">
                     <ul>
-                        <motion.li
-                            variants={linkVariants}
-                            whileHover="hover">
-                            <a
-                                href="#intro"
-                                style={{ color: theme.highlight.primary }}>
-                                Intro
-                                </a>
-                        </motion.li>
                         <motion.li
                             variants={linkVariants}
                             whileHover="hover">

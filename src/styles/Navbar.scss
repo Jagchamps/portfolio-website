@@ -1,9 +1,16 @@
 header {
   position: fixed;
+  right: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 5;
 }
+
+// @media only screen and (max-width: 637px) {
+//   header {
+//     padding: 0em 1em;
+//   }
+// }
 
 .header-inner {
   width: 100%;
@@ -17,13 +24,7 @@ header {
 }
 
 .navbar {
-  // @media (max-width: $bp-medium) {
-  //   display: none;
-  // }
-
-  @media (min-width: $bp-medium) {
-    display: flex;
-  }
+  display: flex;
 
   height: 64px;
 }
@@ -34,9 +35,4 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-.navbar li {
-  margin-left: 20px;
-  margin-right: 20px;
 }

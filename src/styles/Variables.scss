@@ -22,5 +22,43 @@ $bp-large: 1024px;
 $bp-xlarge: 1280px;
 $bp-full: 1600px;
 
+$xs-width: 'only screen and (max-width: 479px)';
+$s-width: 'only screen and (min-width: 480px) and (max-width: 767px)';
+$m-width: 'only screen and (min-width: 768px) and (max-width: 1023px)';
+$l-width: 'only screen and (min-width: 1024px) and (max-width: 1279px)';
+$xl-width: 'only screen and (min-width: 1280px) and (max-width: 1600px)';
+
 $max-width: 1024px;
 $section-width: 768px;
+
+$xs-width: 'only screen and (max-width: 637px)';
+
+@mixin mobile {
+	@media #{$xs-width} {
+		@content;
+	}
+}
+
+@mixin small-screen {
+	@media #{$s-width} {
+		@content;
+	}
+}
+
+@mixin medium-screen {
+	@media #{$m-width} {
+		@content;
+	}
+}
+
+@mixin large-screen {
+	@media #{$l-width} {
+		@content;
+	}
+}
+
+@mixin xlarge-screen {
+	@media #{$xl-width} {
+		@content;
+	}
+}
