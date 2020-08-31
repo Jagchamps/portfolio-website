@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import './styles/App.scss';
-import Footer from './components/Footer.js';
 import Intro from './components/Intro.js';
 import About from './components/About.js';
 import Portfolio from './components/Portfolio.js';
-import OtherProjects from './components/OtherProjects.js';
-import profile from './images/profile.jpg';
 import Skills from './components/Skills';
 import Navbar from './components/Navbar';
 import { ThemeContext } from './contexts/ThemeContext';

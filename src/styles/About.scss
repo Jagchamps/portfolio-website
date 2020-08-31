@@ -9,6 +9,7 @@
         order: 0;
     }
     display: flex;
+    margin-top: 0.5rem;
 }
 
 .about-section-second-item {
@@ -32,12 +33,24 @@
     margin-right: auto;
     align-self: center;
     display: block;
+    filter: grayscale(100%);
+    transition: 0.5s;
 
     width: 342px;
     height: 342px;
+
+    @include mobile {
+        filter: grayscale(0%);
+        width: 284px;
+        height: 284px
+    }
 
     @include full-screen {
         width: 456px;
         height: 456px;
     }
+}
+
+.about-photo:hover {
+    filter: grayscale(0%);
 }
