@@ -70,9 +70,10 @@ const About = () => {
             initial="hidden"
             animate={animation}
         >
+            <div className="section-inner">
             <h2 className="col col-xs-12"><span style={{ color: theme.highlight.secondary }}>About</span> me</h2>
             <div className="col col-xs-12 about-section">
-                <motion.div className="col col-xs-12 col-md-3 about-section-second-item"
+                <motion.div className="col col-xs-12 col-md-6 about-section-second-item"
                     variants={rightContainerVariants}
                 >
                     <motion.img src={profile} className="about-photo show-on-scroll" 
@@ -81,7 +82,7 @@ const About = () => {
                         whileHover={{ filter: 'grayscale(0%)' }}
                         transition={{ duration: 0.5 }} />
                 </motion.div>
-                <motion.div className="col col-xs-12 col-md-3 about-section-first-item"
+                <motion.div className="col col-xs-12 col-md-6 about-section-first-item"
                     variants={leftContainerVariants}
                 >
                     <div className="about-text">
@@ -90,6 +91,7 @@ const About = () => {
                         <p>In my spare time I go climbing, watch artsy films and attend gigs in the fine city of Norwich</p>
                     </div>
                 </motion.div>
+            </div>
             </div>
         </motion.section>
     );

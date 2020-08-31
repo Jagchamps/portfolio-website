@@ -9,6 +9,7 @@ import profile from './images/profile.jpg';
 import Skills from './components/Skills';
 import Navbar from './components/Navbar';
 import { ThemeContext } from './contexts/ThemeContext';
+import Contact from './components/Contact';
 
 const App = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -20,8 +21,7 @@ const App = () => {
       <Intro />
       <About />
       <Skills />
-      {/* <OtherProjects /> */}
-      <Footer />
+      <Contact />
     </div>
   );
 }

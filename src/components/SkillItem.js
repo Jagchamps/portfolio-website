@@ -5,7 +5,7 @@ import { ThemeContext } from '../contexts/ThemeContext';
 const skillVariants = {
     hidden: {
         x: '1vw',
-        opacity: 0
+        opacity: 0,
     },
     visible: {
         x: 0,

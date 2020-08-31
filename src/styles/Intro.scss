@@ -1,3 +1,19 @@
-// .intro-text {
-//     font-size: 7em;
-// }
+.intro {
+    margin-top: 64px;
+    height: 100vh;
+}
+
+.intro-inner {
+    width: 100%;
+    flex-basis: 100%;
+
+    @include small-screen {
+        width: 83.33%;
+        flex-basis: 83.33%;
+    }
+
+    @include large-screen {
+        width: 66.67%;
+        flex-basis: 66.67%;
+    }
+}

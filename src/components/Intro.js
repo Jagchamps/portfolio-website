@@ -11,7 +11,7 @@ const containerVariants = {
         opacity: 1,
         transition: {
             delay: 0.5,
-            duration: 1.5,
+            duration: 0.5,
             when: "beforeChildren",
             staggerChildren: 1.0
         }
@@ -57,16 +57,18 @@ const Intro = () => {
             initial="hidden"
             animate={animation}
         >
-            <motion.h1 className="intro-text col col-xs-12" style={{ color: theme.syntax }}
-                variants={headerVariants}
-            >
-                Hello. I am <span style={{ color: theme.highlight.secondary }}>Jonathan Champion</span>
+            <div className="into-inner">
+                <motion.h1 className="intro-text col col-xs-12" style={{ color: theme.syntax }}
+                    variants={headerVariants}
+                >
+                    Hello. I am <span style={{ color: theme.highlight.secondary }}>Jonathan Champion</span>
+                </motion.h1>
+                <motion.h1 className="intro-text col col-xs-12" style={{ color: theme.syntax }}
+                    variants={headerVariants}
+                >
+                    Software Developer
              </motion.h1>
-            <motion.h1 className="intro-text col col-xs-12" style={{ color: theme.syntax }}
-                variants={headerVariants}
-            >
-                Software Developer
-             </motion.h1>
+            </div>
         </motion.section>
     );
 }

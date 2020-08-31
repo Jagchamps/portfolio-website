@@ -6,12 +6,6 @@ header {
   z-index: 5;
 }
 
-// @media only screen and (max-width: 637px) {
-//   header {
-//     padding: 0em 1em;
-//   }
-// }
-
 .header-inner {
   width: 100%;
   height: 64px;
@@ -25,7 +19,6 @@ header {
 
 .navbar {
   display: flex;
-
   height: 64px;
 }
 

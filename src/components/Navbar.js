@@ -1,16 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import ThemeToggle from './ThemeToggle';
-import { motion } from 'framer-motion';
-
-const linkVariants = {
-    hover: {
-        scale: 1.1,
-        transition: {
-            duration: 0.25
-        }
-    }
-}
 
 const Navbar = () => {
     const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -21,40 +11,35 @@ const Navbar = () => {
             <div
                 className="header-inner"
                 style={{ backgroundColor: theme.ui }}>
-                <nav className="navbar col-xs-12 col-sm-6 col-lg-4 col-xl-2">
+                <nav className="navbar col-xs-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 col-full-3">
                     <ul>
-                        <motion.li
-                            variants={linkVariants}
-                            whileHover="hover">
+                        <li>
                             <a
+                                className='link-line'
                                 href="#about"
                                 style={{ color: theme.highlight.primary }}>
                                 About
                                 </a>
-                        </motion.li>
-                        <motion.li
-                            variants={linkVariants}
-                            whileHover="hover">
+                        </li>
+                        <li>
                             <a
+                                className='link-line'
                                 href="#skills"
                                 style={{ color: theme.highlight.primary }}>
                                 Skills
                                 </a>
-                        </motion.li>
-                        <motion.li
-                            variants={linkVariants}
-                            whileHover="hover">
+                        </li>
+                        <li>
                             <a
+                                className='link-line'
                                 href="#contact"
                                 style={{ color: theme.highlight.primary }}>
                                 Contact
                                 </a>
-                        </motion.li>
-                        <motion.li
-                            variants={linkVariants}
-                            whileHover="hover">
+                        </li>
+                        <li>
                             <ThemeToggle />
-                        </motion.li>
+                        </li>
                     </ul>
                 </nav>
             </div>

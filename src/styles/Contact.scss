@@ -1,0 +1,28 @@
+.contact {
+    margin-bottom: 3rem;
+
+    ul {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mobile {
+            text-align: left;
+        }
+    }
+}
+
+.contact-list-container {
+    margin-left: auto;
+    margin-right: auto;
+}

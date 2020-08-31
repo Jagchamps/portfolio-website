@@ -5,30 +5,39 @@
 }
 
 .about-section-first-item {
-    @media (min-width: $bp-medium) {
+    @include medium-screen {
         order: 0;
     }
     display: flex;
 }
 
 .about-section-second-item {
-    @media (min-width: $bp-medium) {
+    @include medium-screen {
         order: 1;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
 .about-text {
-    padding-left: 16px;
-    max-width: 450px;
-    text-align: left;
+    @include mobile {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 }
 
 .about-photo {
     border-radius: 50%;
-    width: 342px;
-    height: 342px;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
     display: block;
+
+    width: 342px;
+    height: 342px;
+
+    @include full-screen {
+        width: 456px;
+        height: 456px;
+    }
 }

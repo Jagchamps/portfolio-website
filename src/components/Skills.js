@@ -58,13 +58,17 @@ const Skills = () => {
             initial="hidden"
             animate={animation}
         >
-            <motion.h2 className="col col-xs-12 col-sm-8"><span style={{ color: theme.highlight.secondary }}>Skills</span> I know</motion.h2>
-            <motion.div className="col col-xs-12 col-sm-8 skills-section">
-                <motion.p variants={leftContainerVariants}>Here a few skills that I am competent in, and I'm constantly adding more to the list.</motion.p>
-                <motion.ul className="col skills-list">
-                    {items.map(item => <SkillItem id={uuidv1} item={item} />)}
-                </motion.ul>
-            </motion.div>
+            <div className="section-inner">
+                <motion.h2 className="col col-xs-12"><span style={{ color: theme.highlight.secondary }}>Skills</span> I know</motion.h2>
+                <motion.div className="col col-xs-12 skills-section">
+                    <motion.p 
+                        variants={leftContainerVariants}>
+                        Here a few skills that I am competent in, and I'm constantly adding more to the list.</motion.p>
+                    <motion.ul className="col skills-list">
+                        {items.map(item => <SkillItem id={uuidv1} item={item} />)}
+                    </motion.ul>
+                </motion.div>
+            </div>
         </motion.section>
     );
 }
