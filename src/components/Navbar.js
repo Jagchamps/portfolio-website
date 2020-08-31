@@ -10,8 +10,11 @@ const Navbar = () => {
         <header>
             <div
                 className="header-inner"
-                style={{ backgroundColor: theme.ui }}>
-                <nav className="navbar col-xs-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 col-full-3">
+                style={{ backgroundColor: theme.ui, color: theme.highlight.primary }}>
+                <div className="header-right col-md-5 col-lg-4 col-xl-3">
+                    <p className="header-logo">Jonathan Champion</p>
+                </div>
+                <nav className="navbar col-xs-12 col-sm-8 col-md-5 col-lg-4 col-xl-3">
                     <ul>
                         <li>
                             <a

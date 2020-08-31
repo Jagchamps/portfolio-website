@@ -12,7 +12,7 @@ class ThemeContextProvider extends Component {
                 secondary: '#AA3731',
                 tertiary: '#4B69C6'
             },
-            ui: '#f0c6ff66', 
+            ui: '#8f8f8f33', 
             bg: '#f2f2f2' 
         },
         dark: { 
