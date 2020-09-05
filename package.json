@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "homepage": "http://jagchamps.github.io/portfolio-website",
+  "homepage": "https://jonathanchampion.dev/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.26.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.3",
     "uuid": "^8.3.0"
   },
   "scripts": {
