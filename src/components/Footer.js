@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+import ScrollToTop from './ScrollToTop';
 
-function Footer() {
+const Footer = () => {
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
+
     return (
-        <div className="footer">
-            <h2>Want to get in contact?</h2>
-            <div className='contact'>
-                Drop me a line at <span>jonathan.ag.champion@gmail.com</span>
+        <footer style={{ backgroundColor: theme.ui }}>
+            <div className="footer-inner">
+                <div className="col col-xs-12 section-container">
+                    <ScrollToTop />
+                </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

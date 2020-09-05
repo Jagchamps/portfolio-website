@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles/App.scss';
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
-import profile from './images/profile.jpg';
+import Intro from './components/Intro.js';
+import About from './components/About.js';
+import Portfolio from './components/Portfolio.js';
+import Skills from './components/Skills';
+import Navbar from './components/Navbar';
+import { ThemeContext } from './contexts/ThemeContext';
+import Contact from './components/Contact';
 
-class App extends React.Component {
-  render() {
-    return (
-    <div className="profile">
-      <div className="header">
-        <div className="header-left">
-          <img src={profile} className="profile-photo"/>
-          <h1>Jonathan<br/>Champion</h1>
-        </div>
-        <div className="header-right">
-          <h3>jonathan.ag.champion@gmail.com</h3>
-        </div>
-      </div>
+const App = () => {
+  const { isLightTheme, light, dark } = useContext(ThemeContext);
+  const theme = isLightTheme ? light : dark;
+
+  return (
+    <div className="profile" style={{ backgroundColor: theme.bg, color: theme.syntax }}>
       <Navbar />
-      <Footer />
+      <Intro />
+      <About />
+      <Skills />
+      <Contact />
     </div>
-    );
-  }
+  );
 }
 
 export default App;

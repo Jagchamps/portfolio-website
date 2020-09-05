@@ -1,62 +1,52 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    NavLink
-  } from 'react-router-dom';
-import BurgerMenu from './BurgerMenu.js'
-import AboutMe from './AboutMe.js';
-import Portfolio from './Portfolio.js';
-import OtherProjects from './OtherProjects.js';
-import '../styles/App.scss';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+import ThemeToggle from './ThemeToggle';
 
-var styles = {
-    link: {
-        textDecorationLine: 'none',
-        color: 'white',
-        textTransform: 'uppercase',
-        textAlign: 'center'
-    },
+const Navbar = () => {
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
 
-    active: {
-        color: '#0f70e8'
-    }
-};
-
-function Navbar() {
     return (
-        <div className="body">
-            <Router>
-                <nav className='navbar'>
+        <header>
+            <div
+                className="header-inner"
+                style={{ backgroundColor: theme.ui, color: theme.highlight.primary }}>
+                <div className="header-right col-md-5 col-lg-4 col-xl-3">
+                    <p className="header-logo">Jonathan Champion</p>
+                </div>
+                <nav className="navbar col-xs-12 col-sm-8 col-md-5 col-lg-4 col-xl-3">
                     <ul>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} exact to="/portfolio-website">About Me</NavLink>
+                            <a
+                                className='link-line'
+                                href="#about"
+                                style={{ color: theme.highlight.primary }}>
+                                About
+                                </a>
                         </li>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} to="/portfolio">Portfolio</NavLink>
+                            <a
+                                className='link-line'
+                                href="#skills"
+                                style={{ color: theme.highlight.primary }}>
+                                Skills
+                                </a>
                         </li>
                         <li>
-                            <NavLink style={styles.link} activeStyle={styles.active} to="/otherprojects">Other Projects</NavLink>
+                            <a
+                                className='link-line'
+                                href="#contact"
+                                style={{ color: theme.highlight.primary }}>
+                                Contact
+                                </a>
+                        </li>
+                        <li>
+                            <ThemeToggle />
                         </li>
                     </ul>
                 </nav>
-
-                <BurgerMenu />
-
-                <Switch>
-                    <Route path="/portfolio">
-                        <Portfolio />
-                    </Route>
-                    <Route path="/otherprojects">
-                        <OtherProjects />
-                    </Route>
-                    <Route path="/">
-                        <AboutMe />
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
+            </div>
+        </header>
     );
 }
 
