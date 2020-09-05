@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.af5a2616.chunk.css",
-    "main.js": "/static/js/main.cebad429.chunk.js",
-    "main.js.map": "/static/js/main.cebad429.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c6e37e88.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c6e37e88.js.map",
-    "static/js/2.b555103a.chunk.js": "/static/js/2.b555103a.chunk.js",
-    "static/js/2.b555103a.chunk.js.map": "/static/js/2.b555103a.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.98c8daea45912c8298ce9aa433cafafb.js": "/precache-manifest.98c8daea45912c8298ce9aa433cafafb.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.af5a2616.chunk.css.map": "/static/css/main.af5a2616.chunk.css.map",
-    "static/js/2.b555103a.chunk.js.LICENSE.txt": "/static/js/2.b555103a.chunk.js.LICENSE.txt",
-    "static/media/profile.jpg": "/static/media/profile.07a6cb67.jpg"
+    "main.css": "/portfolio-website/static/css/main.af5a2616.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.05665c6a.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.05665c6a.chunk.js.map",
+    "runtime-main.js": "/portfolio-website/static/js/runtime-main.c16362e1.js",
+    "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.c16362e1.js.map",
+    "static/js/2.b555103a.chunk.js": "/portfolio-website/static/js/2.b555103a.chunk.js",
+    "static/js/2.b555103a.chunk.js.map": "/portfolio-website/static/js/2.b555103a.chunk.js.map",
+    "index.html": "/portfolio-website/index.html",
+    "precache-manifest.7a8628a9c0446b715fe8bfedec9484fa.js": "/portfolio-website/precache-manifest.7a8628a9c0446b715fe8bfedec9484fa.js",
+    "service-worker.js": "/portfolio-website/service-worker.js",
+    "static/css/main.af5a2616.chunk.css.map": "/portfolio-website/static/css/main.af5a2616.chunk.css.map",
+    "static/js/2.b555103a.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.b555103a.chunk.js.LICENSE.txt",
+    "static/media/profile.jpg": "/portfolio-website/static/media/profile.07a6cb67.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6e37e88.js",
+    "static/js/runtime-main.c16362e1.js",
     "static/js/2.b555103a.chunk.js",
     "static/css/main.af5a2616.chunk.css",
-    "static/js/main.cebad429.chunk.js"
+    "static/js/main.05665c6a.chunk.js"
   ]
 }
