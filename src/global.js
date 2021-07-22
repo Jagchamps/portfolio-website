@@ -1,17 +1,8 @@
 // global.js
 import { createGlobalStyle } from 'styled-components'
 import { media } from './device';
-import RobotoTTF from './styles/fonts/Roboto-Regular.ttf';
 
 export const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: 'Roboto Regular';
-    src: url(${RobotoTTF}) format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: auto;
-  }
-
   * {
     margin: 0;
     padding: 0;
