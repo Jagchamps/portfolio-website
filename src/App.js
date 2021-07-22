@@ -1,28 +1,40 @@
-import React, { useContext } from 'react';
-import './styles/App.scss';
-import Footer from './components/Footer.js';
-import Intro from './components/Intro.js';
-import About from './components/About.js';
-import Portfolio from './components/Portfolio.js';
-import OtherProjects from './components/OtherProjects.js';
-import profile from './images/profile.jpg';
-import Skills from './components/Skills';
-import Navbar from './components/Navbar';
-import { ThemeContext } from './contexts/ThemeContext';
-import Contact from './components/Contact';
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./global";
+import { lightTheme, darkTheme } from "./theme";
+import Intro from "./components/intro/Intro.js";
+import About from "./components/about/About.js";
+//import Portfolio from './components/Portfolio.js';
+import Skills from "./components/skills/Skills";
+import Navbar from "./components/navigation/Navbar";
+import Contact from "./components/contact/Contact";
+import { useDarkMode } from "./hooks";
 
-const App = () => {
-  const { isLightTheme, light, dark } = useContext(ThemeContext);
-  const theme = isLightTheme ? light : dark;
+function App() {
+  const [open, setOpen] = useState(false);
+  const [theme, toggleTheme, mountedComponent] = useDarkMode();
 
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  if (!mountedComponent) return <div />;
   return (
-    <div className="profile" style={{ backgroundColor: theme.bg, color: theme.syntax }}>
-      <Navbar />
-      <Intro />
-      <About />
-      <Skills />
-      <Contact />
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles open={open}/>
+        <div className="profile">
+          <Navbar
+            theme={theme}
+            toggleTheme={toggleTheme}
+            open={open}
+            setOpen={setOpen}
+          />
+          <Intro />
+          <About />
+          <Skills />
+          <Contact />
+        </div>
+      </>
+    </ThemeProvider>
   );
 }
 
