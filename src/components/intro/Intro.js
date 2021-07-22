@@ -37,6 +37,7 @@ const headerVariants = {
 
 const Intro = () => {
     const animation = useAnimation();
+    // eslint-disable-next-line no-unused-vars
     const [ref, inView, entry] = useInView({ threshold: 0.1 });
 
     useEffect(() => {
