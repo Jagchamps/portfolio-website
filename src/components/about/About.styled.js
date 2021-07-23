@@ -40,18 +40,8 @@ export const StyledAbout = styled.section`
     filter: grayscale(100%);
     transition: 0.5s;
 
-    width: 342px;
-    height: 342px;
-
     ${media.xs`
         filter: grayscale(0%);
-        width: 284px;
-        height: 284px
-    `};
-
-    ${media.full`
-        width: 456px;
-        height: 456px;
     `};
 }
 
