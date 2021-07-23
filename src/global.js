@@ -25,7 +25,6 @@ export const GlobalStyles = createGlobalStyle`
   
     min-height: 100%;
     text-align: center;
-    font-family: 'Roboto Regular';
     overflow: ${({ open }) => (open ? 'hidden' : 'visible')};
   }
   

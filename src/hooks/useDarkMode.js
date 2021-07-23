@@ -10,7 +10,6 @@ export const useDarkMode = () => {
     };
 
     const toggleTheme = () => {
-        console.log('Changing the theme')
         theme === 'light' ? setMode('dark') : setMode('light')
     };
 
