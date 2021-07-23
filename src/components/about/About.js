@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyledAbout } from './About.styled.js';
-import profile from '../../assets/profile.jpg';
+import profileXS from '../../assets/profile-286.jpg';
+import profileSM from '../../assets/profile-342.jpg';
+import profileMD from '../../assets/profile-486.jpg';
 
 const About = () => {
 
@@ -10,7 +12,15 @@ const About = () => {
             <h2 className="col col-xs-12"><span>About</span> me</h2>
             <div className="col col-xs-12 about-section">
                 <div className="col col-xs-12 col-md-6 about-section-second-item">
-                    <img src={profile} className="about-photo show-on-scroll" alt="Headshot of Jonathan Champion"/>
+                    <img src={profileMD} 
+                        srcSet={`${profileXS} 286w, 
+                            ${profileSM} 342w, 
+                            ${profileMD} 486w`} 
+                        sizes="(max-width: 479px) 286px, 
+                            (max-width: 1599px) 342px, 
+                            486px" 
+                        className="about-photo show-on-scroll" 
+                        alt="Headshot of Jonathan Champion"/>
                 </div>
                 <div className="col col-xs-12 col-md-6 about-section-first-item">
                     <div>
