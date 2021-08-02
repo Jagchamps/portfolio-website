@@ -1,6 +1,5 @@
 import React from "react";
 import { StyledSkills } from "./Skills.styled";
-import { v1 as uuidv1 } from "uuid";
 
 const Skills = () => {
   let items = [
@@ -32,7 +31,7 @@ const Skills = () => {
           </p>
           <ul className="col skills-list">
             {items.map((item) => (
-              <li id={uuidv1}>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
           

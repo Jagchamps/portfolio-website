@@ -6,7 +6,7 @@ import Intro from "./components/intro/Intro.js";
 import About from "./components/about/About.js";
 //import Portfolio from './components/Portfolio.js';
 import Skills from "./components/skills/Skills";
-import Navbar from "./components/navigation/Navbar";
+import Navbar from "./components/header/Header";
 import Contact from "./components/contact/Contact";
 import { useDarkMode } from "./hooks";
 

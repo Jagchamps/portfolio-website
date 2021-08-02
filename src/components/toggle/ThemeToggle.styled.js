@@ -2,66 +2,44 @@
 import styled from 'styled-components';
 
 export const StyledThemeToggle = styled.div`
+/* Hide default HTML checkbox */
+input[type="checkbox"] {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 /* The switch - the box around the slider */
 .themeSwitch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.themeSwitch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    border-radius: 100px;
     background-color: ${({ theme }) => theme.highlight.primary};
     -webkit-transition: .4s;
     transition: .4s;
+    box-shadow: 0 0 20px ${({ theme }) => theme.highlight.primary};
 }
 
-.slider:before {
-    position: absolute;
+label::after {
     content: "";
-    height: 26px;
     width: 26px;
+    height: 26px;
+    background-color: ${({ theme }) => theme.bg};
+    position: absolute;
+    border-radius: 70px;
+    top: 4px;
     left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 0.5s;
 }
 
-input:checked + .slider {
-    background-color: ${({ theme }) => theme.highlight.primary};
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px ${({ theme }) => theme.highlight.primary};
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
+input:checked + label:after {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+label:active:after {
+    width: 30px;
 }
 `;
